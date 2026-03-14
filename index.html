@@ -1403,6 +1403,7 @@ function showPage(id) {
 
 document.querySelectorAll('.nav-link, .nav-link-live').forEach(function(link) {
   link.addEventListener('click', function(e) {
+    if (!this.dataset.page) return; // let external links (YouTube, Facebook) open normally
     e.preventDefault();
     showPage(this.dataset.page);
   });
