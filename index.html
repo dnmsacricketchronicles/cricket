@@ -388,10 +388,6 @@ padding:.3rem .8rem;
 transition:color .25s;
 }
 .r-restart-inner:hover{color:#d4af37}
-body[data-scene=“6”] .r-restart-inner{color:rgba(212,175,55,.45)}
-body[data-scene=“6”] .r-restart-inner:hover{color:#d4af37}
-body[data-scene=“0”] .r-end-inner{color:rgba(212,175,55,.45)}
-body[data-scene=“0”] .r-end-inner:hover{color:#d4af37}
 .r-swipe-arrow{
 font-size:clamp(.9rem,1.8vw,1.1rem);
 opacity:.55;
@@ -420,26 +416,12 @@ transition:color .3s, opacity .3s;
 
 /* Scene colour themes for swipe hint */
 /* rs0 intro — gold */
-body[data-scene=“0”] .r-swipe-text,
-body[data-scene=“0”] .r-swipe-arrow { color:#d4af37; }
 /* rs1 rain — steel blue */
-body[data-scene=“1”] .r-swipe-text,
-body[data-scene=“1”] .r-swipe-arrow { color:#90b8e0; }
 /* rs2 green win */
-body[data-scene=“2”] .r-swipe-text,
-body[data-scene=“2”] .r-swipe-arrow { color:#80c880; }
 /* rs3 rose upset */
-body[data-scene=“3”] .r-swipe-text,
-body[data-scene=“3”] .r-swipe-arrow { color:#e080b0; }
 /* rs4 clasico gold */
-body[data-scene=“4”] .r-swipe-text,
-body[data-scene=“4”] .r-swipe-arrow { color:#d4af37; }
 /* rs5 duelo blue-orange */
-body[data-scene=“5”] .r-swipe-text,
-body[data-scene=“5”] .r-swipe-arrow { color:#f97316; }
 /* rs6 finale — gold */
-body[data-scene=“6”] .r-swipe-text,
-body[data-scene=“6”] .r-swipe-arrow { color:#d4af37; }
 
 #r-progress-nav{position:fixed;bottom:3.5rem;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:1rem;z-index:601}
 .r-prog-dot{width:8px;height:8px;border-radius:50%;background:rgba(212,175,55,.25);transition:background .3s,transform .3s;cursor:pointer}
@@ -1153,7 +1135,7 @@ body[data-scene=“6”] .r-swipe-arrow { color:#d4af37; }
     <div class="r-p-number">5</div>
     <div class="r-p-eyebrow">Match 5 &nbsp;·&nbsp; The Inaugural El Duelo</div>
     <div class="r-p-chapter" style="color:rgba(120,140,220,.6)">Chapter VII — El Duelo</div>
-    <h2 class="r-p-title">The Blockbuster Duel</h2>
+    <h2 class="r-p-title" style="text-align:center">The Blockbuster Duel</h2>
     <div class="r-p-date">14th February, 2026 &nbsp;·&nbsp; Prayagraj · Under Lights</div>
     <div class="r-p-rule"></div>
     <p class="r-p-body">Younger players only. No retirement rules. No limits.<br>President's XI led by <strong>Anadi Krishna Narayana</strong>.<br>Patron's XI captained by <strong>Mehul Khare</strong>.<br><em>A Valentine's Day under lights. A rivalry born.</em></p>
@@ -1300,9 +1282,18 @@ function closeRecap() {
   document.body.style.overflow = '';
 }
 
-// Update body data-scene so CSS can colour the swipe hint per scene
+// Apply colours directly via inline styles — no CSS attribute selectors needed
+var SCENE_COLORS = ['#d4af37','#90b8e0','#80c880','#e080b0','#d4af37','#f97316','#d4af37'];
 function rSetSceneTheme(idx) {
-  document.body.setAttribute('data-scene', idx);
+  var col = SCENE_COLORS[idx] || '#d4af37';
+  var elems = [
+    document.getElementById('r-arrow-left'),
+    document.getElementById('r-arrow-right'),
+    document.querySelector('.r-swipe-text'),
+    document.querySelector('.r-restart-inner'),
+    document.querySelector('.r-end-inner')
+  ];
+  elems.forEach(function(el){ if(el) el.style.color = col; });
 }
 
 // Update swipe hint arrows, restart button, and end button per scene
