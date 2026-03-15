@@ -300,8 +300,8 @@ p{margin-bottom:1.5rem;text-align:justify}
 #recap-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
 .r-scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 600ms ease}
 .r-scene.r-active{opacity:1;pointer-events:all}
-#rs0{background:radial-gradient(ellipse 120% 100% at 50% 60%,#1a1830 0%,#08091a 60%,#020810 100%)}
-#rs0::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 85% 65% at 50% 50%,rgba(184,134,11,.55) 0%,transparent 70%)}
+#rs0{background:#020810}
+#rs0::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(184,134,11,.28) 0%,transparent 65%)}
 .r-intro-stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 8% 15%,rgba(255,255,255,.7) 0%,transparent 100%),radial-gradient(2px 2px at 55% 85%,rgba(212,175,55,.8) 0%,transparent 100%),radial-gradient(1px 1px at 82% 55%,rgba(255,255,255,.45) 0%,transparent 100%),radial-gradient(2px 2px at 94% 32%,rgba(212,175,55,.7) 0%,transparent 100%),radial-gradient(1px 1px at 30% 5%,rgba(255,255,255,.5) 0%,transparent 100%),radial-gradient(2px 2px at 5% 88%,rgba(212,175,55,.6) 0%,transparent 100%)}
 .r-intro-inner{position:relative;z-index:1;text-align:center;padding:2rem}
 .r-intro-eyebrow{font-family:‘Cinzel’,serif;font-size:clamp(.6rem,1.5vw,.85rem);letter-spacing:.6em;text-transform:uppercase;color:rgba(184,134,11,.75);margin-bottom:2rem;opacity:0;animation:r-fadeUp .8s .3s forwards}
@@ -483,8 +483,8 @@ transition:color .3s, opacity .3s;
 #rs3 .r-match-topbar{background:linear-gradient(to right,transparent,#a04070,#e080b0,#a04070,transparent)}
 #rs3 .r-award-pill{background:rgba(50,15,35,.7);border:1px solid rgba(160,60,110,.35);color:#d090b8}
 .r-upset-banner{font-family:‘Cinzel’,serif;font-weight:900;font-size:clamp(1rem,2.5vw,1.6rem);letter-spacing:.12em;text-transform:uppercase;color:#ff80b0;text-shadow:0 0 30px rgba(255,100,150,.7);padding:.6rem 1.5rem;border:1px solid rgba(255,100,150,.35);border-radius:.5rem;margin-bottom:1rem;animation:r-pulse 2s infinite}
-#rs4 .r-match-bg{background:linear-gradient(160deg,#201600 0%,#100900 100%)}
-#rs4 .r-match-bg::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 95% 80% at 50% 45%,rgba(180,130,0,.7) 0%,rgba(120,80,0,.4) 60%,transparent 80%)}
+#rs4 .r-match-bg{background:linear-gradient(160deg,#1a1200 0%,#0a0700 100%)}
+#rs4 .r-match-bg::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 80% 65% at 50% 45%,rgba(160,110,0,.38) 0%,rgba(100,65,0,.18) 60%,transparent 78%)}
 #rs4 .r-match-bg::after{content:’’;position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,6,0,.5) 0%,transparent 30%,transparent 70%,rgba(8,6,0,.6) 100%)}
 #rs4 .r-p-eyebrow{color:rgba(184,134,11,.75)}
 #rs4 .r-p-title{background:linear-gradient(175deg,#fff8e8 0%,#f0d060 25%,#d4af37 45%,#b8860b 55%,#d4af37 70%,#f0d060 85%,#fff8e8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 35px rgba(212,175,55,.55)) drop-shadow(0 3px 10px rgba(0,0,0,.7))}
@@ -530,10 +530,10 @@ transition:color .3s, opacity .3s;
 .r-ball-row.r-six .r-ball-desc{color:#fbd0a8}
 .r-ball-row.r-four .r-ball-desc{color:#bfdbfe}
 .r-ball-row.r-dot .r-ball-desc{color:rgba(160,165,210,.75)}
-#rs6{background:radial-gradient(ellipse 120% 100% at 50% 60%,#181520 0%,#080814 60%,#020810 100%)}
-#rs6::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 88% 70% at 50% 50%,rgba(184,134,11,.55) 0%,transparent 72%)}
+#rs6{background:#020810}
+#rs6::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 50%,rgba(184,134,11,.22) 0%,transparent 65%)}
 .r-finale-stars{position:absolute;inset:0;pointer-events:none}
-.r-finale-stars::before{content:’’;position:absolute;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,rgba(255,255,255,.6) 0%,transparent 100%),radial-gradient(2px 2px at 30% 75%,rgba(212,175,55,.8) 0%,transparent 100%),radial-gradient(1px 1px at 70% 15%,rgba(255,255,255,.55) 0%,transparent 100%),radial-gradient(2px 2px at 85% 65%,rgba(212,175,55,.7) 0%,transparent 100%),radial-gradient(1px 1px at 60% 85%,rgba(255,255,255,.5) 0%,transparent 100%)}
+#finale-star-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
 .r-finale-inner{position:relative;z-index:1;text-align:center;padding:2rem;max-width:52rem}
 .r-finale-trophy{font-size:clamp(3rem,8vw,5rem);margin-bottom:1.5rem;filter:drop-shadow(0 0 20px rgba(212,175,55,.6));animation:r-pulse 2s infinite}
 .r-finale-title{font-family:‘Cinzel’,serif;font-weight:900;font-size:clamp(1.5rem,4.5vw,3.5rem);letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(175deg,#fff8e8,#f0d060,#d4af37,#b8860b,#d4af37,#f0d060,#fff8e8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(212,175,55,.5));margin-bottom:1rem;opacity:0;animation:r-fadeUp 1s .3s forwards}
@@ -1179,7 +1179,7 @@ transition:color .3s, opacity .3s;
 
 <!-- FINALE -->
 <div class="r-scene" id="rs6">
-  <div class="r-finale-stars"></div>
+  <div class="r-finale-stars"><canvas id="finale-star-canvas"></canvas></div>
   <div class="r-finale-inner">
     <div class="r-finale-trophy">🏆</div>
     <h2 class="r-finale-title">The Legacy of Legends</h2>
@@ -1768,6 +1768,123 @@ document.addEventListener('touchend', function(e) {
 
   document.addEventListener('DOMContentLoaded', function(){
     var el = document.getElementById('rs2');
+    if(el && el.classList.contains('r-active')) start();
+  });
+})();
+
+// ──────────────────────────────────────────────────────────────
+// FINALE STAR FIELD — animated slow-drifting stars on rs6
+// ──────────────────────────────────────────────────────────────
+(function(){
+  var canvas, ctx, stars = [], raf = null, running = false;
+  var STAR_COUNT = 180;
+
+  function init(){
+    canvas = document.getElementById('finale-star-canvas');
+    if(!canvas) return;
+    ctx = canvas.getContext('2d');
+    resize();
+    window.addEventListener('resize', resize);
+  }
+
+  function resize(){
+    if(!canvas) return;
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    spawnStars();
+  }
+
+  function rand(a, b){ return a + Math.random() * (b - a); }
+
+  function spawnStars(){
+    if(!canvas) return;
+    stars = [];
+    for(var i = 0; i < STAR_COUNT; i++){
+      // ~85% white stars, ~15% gold stars
+      var isGold = Math.random() < 0.15;
+      var size   = isGold ? rand(1.2, 2.2) : rand(0.5, 1.6);
+      stars.push({
+        x:      rand(0, canvas.width),
+        y:      rand(0, canvas.height),
+        size:   size,
+        alpha:  rand(0.2, isGold ? 0.85 : 0.75),
+        // twinkle
+        twinkleSpeed: rand(0.004, 0.016),
+        twinklePhase: rand(0, Math.PI * 2),
+        // slow drift — tiny velocity
+        vx:     rand(-0.04, 0.04),
+        vy:     rand(-0.025, 0.025),
+        isGold: isGold
+      });
+    }
+  }
+
+  var tick = 0;
+  function loop(){
+    if(!canvas || !ctx){ running = false; return; }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    tick += 0.016;
+
+    for(var i = 0; i < stars.length; i++){
+      var s = stars[i];
+
+      // Slow drift
+      s.x += s.vx;
+      s.y += s.vy;
+
+      // Wrap around edges
+      if(s.x < -2) s.x = canvas.width + 2;
+      if(s.x > canvas.width + 2) s.x = -2;
+      if(s.y < -2) s.y = canvas.height + 2;
+      if(s.y > canvas.height + 2) s.y = -2;
+
+      // Twinkle — gentle sine pulse on alpha
+      var twinkle = 0.5 + 0.5 * Math.sin(tick * s.twinkleSpeed * 60 + s.twinklePhase);
+      var alpha   = s.alpha * (0.55 + 0.45 * twinkle);
+
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+      if(s.isGold){
+        ctx.fillStyle = 'rgba(212,175,55,1)';
+        // subtle glow on gold stars
+        ctx.shadowColor  = 'rgba(212,175,55,0.8)';
+        ctx.shadowBlur   = 4;
+      } else {
+        ctx.fillStyle = 'rgba(255,255,255,1)';
+        ctx.shadowColor  = 'rgba(255,255,255,0.5)';
+        ctx.shadowBlur   = s.size > 1.2 ? 3 : 0;
+      }
+      ctx.fill();
+      ctx.restore();
+    }
+    raf = requestAnimationFrame(loop);
+  }
+
+  function start(){
+    if(!canvas) init();
+    else resize();
+    if(!running){ running = true; loop(); }
+  }
+
+  function stop(){
+    if(raf){ cancelAnimationFrame(raf); raf = null; }
+    running = false;
+    if(canvas && ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+  var rs6El = document.getElementById('rs6');
+  if(rs6El){
+    var obs = new MutationObserver(function(){
+      if(rs6El.classList.contains('r-active')) start();
+      else stop();
+    });
+    obs.observe(rs6El, {attributes:true, attributeFilter:['class']});
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var el = document.getElementById('rs6');
     if(el && el.classList.contains('r-active')) start();
   });
 })();
