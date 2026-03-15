@@ -1253,9 +1253,9 @@ body[data-scene=“6”] .r-swipe-arrow { color:#d4af37; }
 </div><!-- /page-recap -->
 
 <script>
-// ──────────────────────────────────────
+// --------------------------------------
 // CHRONICLES NAVIGATION
-// ──────────────────────────────────────
+// --------------------------------------
 var PAGES = ['history','rain','winter','third','clasico','duelo','blockbuster','genesis','why','box-cricket'];
 
 function showPage(id) {
@@ -1280,11 +1280,11 @@ document.querySelectorAll('.nav-link, .nav-link-live, .nav-link-recap').forEach(
 
 showPage('why');
 
-// ──────────────────────────────────────
+// --------------------------------------
 // MATCH RECAP OVERLAY
-// ──────────────────────────────────────
+// --------------------------------------
 var R_SCENES = ['rs0','rs1','rs2','rs3','rs4','rs5','rs6'];
-var R_MATCH_LABELS = ['','Match 1 · Inaugural · June 2022','Match 2 · The December Rains · December 2023','Match 3 · Third Edition · January 2025','Match 4 · El Clásico · January 2026','Match 5 · El Duelo · February 2026',''];
+var R_MATCH_LABELS = ['','Match 1 · Inaugural · June 2022','Match 2 · The December Rains · December 2023','Match 3 · Third Edition · January 2025','Match 4 · El Cl\u00e1sico · January 2026','Match 5 · El Duelo · February 2026',''];
 var R_PHASES_PER_SCENE = [0, 3, 3, 3, 3, 4, 0];
 var rCurrentScene = 0;
 var rCurrentPhase = 1;
@@ -1401,9 +1401,9 @@ document.addEventListener('touchend', function(e) {
 </script>
 
 <script>
-// ──────────────────────────────────────────────────
+// --------------------------------------------------
 // RAIN CANVAS — subtle raindrops on Rain & Cricket
-// ──────────────────────────────────────────────────
+// --------------------------------------------------
 (function(){
   var canvas, ctx, drops = [], raf, running = false;
 
@@ -1492,9 +1492,9 @@ document.addEventListener('touchend', function(e) {
   });
 })();
 
-// ──────────────────────────────────────────────────────────
+// ----------------------------------------------------------
 // WINTER CANVAS — falling 4s and 6s on The December Rains
-// ──────────────────────────────────────────────────────────
+// ----------------------------------------------------------
 (function(){
   var canvas, ctx, glyphs = [], raf, running = false;
   var CHARS = ['4','6'];
@@ -1589,10 +1589,10 @@ document.addEventListener('touchend', function(e) {
   });
 })();
 
-// ──────────────────────────────────────────────────────────────
+// --------------------------------------------------------------
 // RECAP RAIN CANVAS — canvas rain on rs1 "A Bit of History"
 // Activates when rs1 has class r-active; stops otherwise
-// ──────────────────────────────────────────────────────────────
+// --------------------------------------------------------------
 (function(){
   var canvas, ctx, drops = [], raf = null, running = false;
 
@@ -1682,10 +1682,10 @@ document.addEventListener('touchend', function(e) {
   });
 })();
 
-// ──────────────────────────────────────────────────────────────
+// --------------------------------------------------------------
 // RS2 GLYPH CANVAS — falling 4s and 6s on "The Run Feast" scene
 // Identical parameters to The December Rains page canvas
-// ──────────────────────────────────────────────────────────────
+// --------------------------------------------------------------
 (function(){
   var canvas, ctx, glyphs = [], raf = null, running = false;
   var CHARS   = ['4','6'];
